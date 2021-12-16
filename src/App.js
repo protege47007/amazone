@@ -1,18 +1,16 @@
 import React from 'react';
+import Desktop from './components/Desktop';
+import Mobile from './components/Mobile';
+import Footer from './components/Footer';
 import './styles/basis.css';
 import './styles/mobile.css';
-import Aside from './components/Aside';
-import Body from './components/Body';
-import Footer from './components/Footer';
-import Header from './components/Header';
 
 
 function App() {
   return (
     <div className="App">
-      <Header/>
-      <Aside/>
-      <Body/>
+      <Mobile/>
+      <Desktop/>
       <Footer/>
     </div>
   );

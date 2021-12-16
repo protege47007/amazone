@@ -8,113 +8,41 @@
 
 /*small phones*/
 @media only screen and (min-width: 320px){
+    .desktop{
+        display: none;
+    }
     body{
         width: 100vw !important;
         height: auto;
     }
-    .App{
-        margin: 0;
-    }
     header, .advert, .pop-categ, .hot-deals, .menu{
-        margin: 2% 3%;
+        padding: 2% 3%;
+    }
+    .mobile, .categ-bg{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
     }
 
     header{
-        width: 94%;
+        width: 100%;
         height: 8rem;
         background-color: antiquewhite;
         display: grid;
-        grid-template-columns: 30% 25% 15% 15% 15%;
-        grid-template-rows: 33% 35% 32%;
-    }
-    /* logo styles */
-    .brand{
-        width: 100%;
-        height: 100%;
-        display: inline;
-        grid-column: 1/2;
-        grid-row: 1/3;
-        background-color: var(--background);
-    }
-
-    .brand > img{
-        width: 100%;
-        height: 100%;
-        transform: scale(1.3);
-    }
-
-    /* cart and notifications stylings */
-    .cart{
-        grid-row: 1/2;
-        grid-column: 3/4;
-    }
-    .notify{
-        grid-column: 4/5;
-        grid-row: 1/2;
-    }
-    .number{}
-
-    /* profile styling */
-    .profile{
-        grid-column: 5/6;
-        grid-row: 1/2;
-    }
-
-    /* search bar styling */
-    form{
-        grid-row: 2/4;
-        grid-column: 2/6;
-        display: grid;
-        grid-template-columns: 79% 21%;
-        grid-template-rows: 50%;
-        padding: 0% 0% 0 3%;
-    }
-    .search-field{
-        border: none;
-        width: 105%;
-    }
-    .search-field:focus{
-        outline: none;
-        padding: 0 10px;
-    }
-    .search-field, .search-btn{
-        border-radius: 7px; 
-    }
-    .search-btn{
-        border: none;
-    }
-    .select-menu{
-        display: none;
-    }
-    option{}
-    .select-alt{
-        display: flex;
-        flex-direction: row;
-        overflow-x: scroll;
-        grid-column: 1/6;
-        grid-row: 3/4;
         align-items: center;
-    }
-    .select-alt > p{
-        display: block;
-        white-space: nowrap;
-        word-spacing: -.09rem;
-        margin: 0 4% 
-    }
-    .select-alt > p:nth-child(1){
-        margin-left: 0;
-    }
-    .search-btn{
+        justify-items: center;
+        grid-template-columns: 10% 50% 10% 10% 10% 10%;
+        grid-template-rows: 33% 33% 33%;
+        overflow-x: hidden;
     }
 
 
     .aside-cont{
-        margin: 4% 0;
-        position: relative;
+        grid-column: 1/2;
+        grid-row: 1/2;
     }
     aside{
-        position: absolute;
-        left: 3%;
         display: none;
         width: 45%;
         height: 10rem;
@@ -130,19 +58,111 @@
         display: block;
     }
 
-    main{
+
+    /* logo styles */
+    .brand{
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+    .mobile > h1{
+        font-size: 1.5rem;
+    }
+    .underline{
+        width: 80%;
+        height: .3rem;
+        background-color: aquamarine;
+    }
+
+    /* cart and notifications stylings */
+    .like{
+        grid-row: 1/2;
+        grid-column: 3/4;
+    }
+    .cart{
+        grid-row: 1/2;
+        grid-column: 4/5;
+    }
+    .notify{
+        grid-column: 5/6;
+        grid-row: 1/2;
+    }
+    .number{}
+
+    /* profile styling */
+    .profile{
+        grid-column: 6/7;
+        grid-row: 1/2;
+    }
+
+    /* search bar styling */
+    form{
+        grid-row: 2/3;
+        grid-column: 1/7;
         width: 100%;
-        display: inline-block;
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        grid-template-columns: 79% 21%;
+        height: 100%;
+    }
+    .search-field{
+        border: none;
+        height: 90%;
+        width: 102%;
+        border-top-right-radius: 0px !important;
+        border-bottom-right-radius: 0px !important;
+    }
+    .search-field:focus{
+        outline: none;
+        padding: 0 10px;
+    }
+    .search-field, .search-btn{
+        border-radius: 7px; 
+    }
+    .search-btn{
+        border: none;
+        width: 100%;
+        height: 90%;
+    }
+    .select-menu{
+        display: none;
+    }
+
+    option{}
+
+    .select-alt{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        overflow-x: scroll;
+        grid-column: 1/7;
+        grid-row: 3/4;
+        align-items: center;
+    }
+    .select-alt > p{
+        white-space: nowrap;
+        word-spacing: -.09rem;
+    }
+    .select-alt > p{
+        padding: 0 4%;
+    }
+    .select-alt > p:nth-child(1), .categ-bg:nth-child(1){
+        padding-left: 0;
+    }
+    .search-btn{
     }
 
     .advert{
-        width: 94%;
+        width: 100%;
         height: auto;
         display: grid;
         grid-template-columns: 50% 50%;
         background-color: var(--background);
         color: var(--primary);
-        padding: 1% 0;
+    }
+    .ad-heading, .ad-desc, .categ-heading, .deals-heading{
+        padding: 3% 0;
     }
     .ad-img{
         width: 100%;
@@ -155,32 +175,209 @@
         border: none;
     }
     .pop-categ{
-        background-color: ;
+        overflow-x: hidden;
+        width: 100%;
+
     }
 
-    .categ-item{
+    .categ-item, .hot-deals, .hint{
         display: flex;
-        flex-direction: row;
         overflow-x: scroll;
     }
-    .hot-deals{
-        display: grid;
-        grid-template-columns: 47% 47%;
-        grid-template-rows: 10rem;
+    .categ-item{
+        flex-direction: row;
+        align-items: center;
+        height: 10rem;
+    }
+    .categ-bg{
+        background-color: rgba(127, 255, 212, 0.219);
+        display: inline-block;
+        width: 6rem;
+        height: 90%;
+        margin: 0 2%;
+    }
+    .categ-img{
+        width: 6rem;
+        height: 6rem;
+    }
+    .hint{
+        width: 100%;
+        height: 2rem;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        font-size: .9rem;
+    }
+    .categ-img > img{
+        width: 90%;
+        height: 90%;
     }
 
+    .hot-deals{
+        width: 100%;
+        flex-direction: column;
+    }
+
+    /* grid-styling */
+    .deal-section-grid{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 18rem;
+    }
+
+    .products-grid{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        background-color: beige;
+        padding-bottom: 1rem;
+    }
+    .products-grid:nth-child(1n){
+        padding-right: 2%;
+    }
+    .products-grid:nth-child(2n){
+        padding-left: 2%;
+    }
+    .like-btn-grid{
+        position: absolute;
+        width: 1rem;
+        height: 1rem;
+        right: .2rem;
+        top: .2rem
+    }
+    .preview-grid{
+        width: 100%;
+        height: 10rem;
+    }
+    .product-name-grid{
+        display: block;
+        font-size: .7rem;
+        font-weight: bolder;
+    }
+    .product-brand-grid{
+        font-size: .7rem;
+    }
+    .ratings-grid{
+        width: 100%;
+        height: 10%; 
+    }
+    .ratings-star-grid{
+        width: 70%;
+        height: 100%; 
+        padding-right: .5rem;
+    }
+    .stars-grid{
+        width: .7rem;
+        height: .7rem;
+    }
+    .reviews-grid{
+        width: 30%;
+        height: 100%;
+        font-size: .8rem;
+    }
+    .pricing-grid{
+        width: 100%;
+    }
+    .actual-grid{
+        font-size: .9rem;
+        padding-right: .5rem;
+        font-weight: bolder;
+    }
+    .strike-fake-grid{
+        font-size: .7rem;
+        text-decoration: line-through;
+        opacity: .7;
+    }
+
+    /* list view for hot deals */
+    .deal-section-list{
+        display: flex;
+        flex-direction: column;
+        flex-basis: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .products-list{
+        width: 100%;
+        height: 14rem;
+        background-color: beige;
+        padding-bottom: 1rem;
+        position: relative;
+        display: grid;
+        grid-template-columns: 40% 60%;
+        align-items: center;
+    }
+    .like-btn-list{
+        position: absolute;
+        width: 1rem;
+        height: 1rem;
+        right: .2rem;
+        top: .2rem
+    }
+    .preview-list{
+        grid-column: 1/2;
+        width: 100%;
+        height: 10rem;
+        padding: 1% 2% 0 0;
+    }
+    .details-list{
+        grid-column: 2/3;
+        grid-row: 1/2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .product-name-list{
+        display: block;
+        font-size: .7rem;
+        font-weight: bolder;
+        padding: 30% 0 10%;
+    }
+    .product-brand-list{
+        font-size: .7rem;
+    }
+    .ratings-list{
+        width: 100%;
+        height: 10%;
+    }
+    .ratings-star-list{
+        width: 70%;
+        height: 100%;
+    }
+    .stars-list{
+        width: .7rem;
+        height: .7rem;
+    }
+    .reviews-list{
+        width: 30%;
+        height: 100%;
+        font-size: .8rem;
+    }
+    .pricing-list{
+        width: 100%;
+    }
+    .actual-list{
+        font-size: .9rem;
+        padding-right: .5rem;
+        font-weight: bolder;
+    }
+    .strike-fake-list{
+        font-size: .7rem;
+        text-decoration: line-through;
+        opacity: .7;
+    }
     
     
     
     footer{
         display: inline-block;
-        width: 90%;
+        width: 100%;
+        text-align: center;
+        padding: 5% 0;
+        opacity: .7;
     }
 
-    img{
-        width: 50%;
-        height: 50%;
-    }
 
 }
 /*normal phones*/

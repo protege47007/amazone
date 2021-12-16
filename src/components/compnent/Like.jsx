@@ -2,7 +2,7 @@ import React from 'react'
 
 function Like(props) {
     return (
-        <div className="like"></div>
+        <div className="like">{'{{}}'}</div>
     )
 }
 

@@ -6,11 +6,11 @@ import PopCate from './body/PopCate'
 
 function Body() {
     return (
-        <main>
+        <>
             <Ad/>
             <PopCate/>
             <HotDeals/>
-        </main>
+        </>
     )
 }
 

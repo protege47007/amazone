@@ -5,7 +5,9 @@ import {categories} from './resource.jsx'
 function PopCate() {
     const item = categories.map((e, i) => (
         <div className="categ-bg" key={i}>
+            <div className="categ-img">
             <img src={e.src} alt={e.name} />
+            </div>
             <span className="hint">{e.name}</span>
         </div>
     ));
